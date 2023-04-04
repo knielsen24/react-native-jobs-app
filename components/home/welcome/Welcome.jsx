@@ -13,6 +13,7 @@ import styles from "./welcome.style";
 import { icons, SIZES } from "../../../constants";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
+console.log(jobTypes);
 
 const Welcome = () => {
     const router = useRouter();
@@ -41,7 +42,7 @@ const Welcome = () => {
             </View>
             <View style={styles.tabsContainer}>
                 <FlatList
-                    date={jobTypes}
+                    data={jobTypes}
                     renderItem={({ item }) => (
                         <TouchableOpacity>
                             <Text>{item}</Text>
