@@ -6,10 +6,8 @@ import axios from "axios";
 
 export default function useFetch(endpoint, query) {
     const [data, setData] = useState([]);
-    const [isloading, setIsloading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-
-    const axios = require("axios");
 
     const options = {
         method: "GET",
@@ -23,16 +21,17 @@ export default function useFetch(endpoint, query) {
     };
 
     const fetchData = async () => {
-        setIsloading(true);
+        setIsLoading(true);
         try {
             const response = await axios.request(options);
+            console.log(response.data.data);
             setData(response.data.data);
-            setIsloading(false);
+            setIsLoading(false);
         } catch (error) {
             setError(error);
             alert("There is an error");
         } finally {
-            setIsloading(false);
+            setIsLoading(false);
         }
     };
 
@@ -41,9 +40,9 @@ export default function useFetch(endpoint, query) {
     }, []);
 
     const refecth = () => {
-        setIsloading(true);
+        setIsLoading(true);
         fetchData();
     };
 
-    return { data, isloading, error, refecth };
+    return { data, isLoading, error, refecth };
 }
