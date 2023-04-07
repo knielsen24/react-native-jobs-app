@@ -13,7 +13,6 @@ import styles from "./welcome.style";
 import { icons, SIZES } from "../../../constants";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
-console.log(jobTypes);
 
 const Welcome = () => {
     const router = useRouter();
