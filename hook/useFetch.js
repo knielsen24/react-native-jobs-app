@@ -21,7 +21,6 @@ export default function useFetch(endpoint, query) {
         setIsLoading(true);
         try {
             const response = await axios.request(options);
-            console.log(response.data.data);
             setData(response.data.data);
             setIsLoading(false);
         } catch (error) {

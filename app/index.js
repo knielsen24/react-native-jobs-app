@@ -25,13 +25,20 @@ export default function Home() {
                     },
                     headerShadowVisible: false,
                     headerLeft: () => (
-                        <ScreenHeaderBtn iconURL={icons.menu} dimension="60%" />
+                        <View style={{ paddingLeft: 15 }}>
+                            <ScreenHeaderBtn
+                                iconURL={icons.menu}
+                                dimension="60%"
+                            />
+                        </View>
                     ),
                     headerRight: () => (
-                        <ScreenHeaderBtn
-                            iconURL={images.profile}
-                            dimension="100%"
-                        />
+                        <View style={{ paddingRight: 15 }}>
+                            <ScreenHeaderBtn
+                                iconURL={images.profile}
+                                dimension="100%"
+                            />
+                        </View>
                     ),
                     headerTitle: "",
                 }}
